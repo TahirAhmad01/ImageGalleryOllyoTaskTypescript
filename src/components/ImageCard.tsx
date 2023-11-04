@@ -43,7 +43,8 @@ const ImageCard: React.FC<ImageCardProps> = ({
       }
 
       const hoverBoundingRect = ref.current.getBoundingClientRect();
-      const hoverMiddleY = hoverBoundingRect.bottom - hoverBoundingRect.top;
+      const hoverMiddleY =
+        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
       const clientOffset = monitor.getClientOffset();
 
       const hoverClientY = clientOffset!.y - hoverBoundingRect.top;
