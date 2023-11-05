@@ -19,7 +19,6 @@ const SelectItems: React.FC<SelectItemsProps> = ({
   const selectedItemCount: number = images.filter(
     (image) => image.selected
   ).length;
-  const [checked, setChecked] = useState<boolean>(true);
 
   // selected image delete
   const handleImageClick = (): void => {
@@ -35,7 +34,6 @@ const SelectItems: React.FC<SelectItemsProps> = ({
     }));
 
     setImages(updatedImages);
-    setChecked(false);
   };
 
   return (
@@ -48,7 +46,8 @@ const SelectItems: React.FC<SelectItemsProps> = ({
               value=""
               name="bordered-checkbox"
               onChange={handelImageDeselect}
-              checked={checked}
+              checked
+              readOnly
               id="checkbox"
               className="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 hover:cursor-pointer"
             />
