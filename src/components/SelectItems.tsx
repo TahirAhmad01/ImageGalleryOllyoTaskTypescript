@@ -65,14 +65,14 @@ const SelectItems: React.FC<SelectItemsProps> = ({
           <div className="flex gap-1 md:gap-3">
             <button
               type="button"
-              className="md:px-7 px-3 py-2 text-xs sm:text-sm font-semibold rounded-3xl bg-gray-50 hover:bg-blue-100 text-blue-600"
+              className="px-3 md:px-7 py-2 md:py-2 text-xs sm:text-sm font-semibold rounded-3xl bg-gray-100 hover:bg-blue-600 hover:text-white text-blue-600"
               onClick={() => handelImageSelectDeselect(!areAllImagesSelected)}
             >
               {areAllImagesSelected ? "Deselect All" : "Select All"}
             </button>
             <button
               type="button"
-              className="md:px-7 px-3 py-2 text-xs sm:text-sm font-semibold rounded-3xl bg-gray-50 hover:bg-red-100 text-red-600"
+              className="px-3 md:px-7 py-2 md:py-2 text-xs sm:text-sm font-semibold rounded-3xl bg-red-100 hover:bg-red-600 hover:text-white text-red-600"
               onClick={handleImageClick}
             >
               Delete Files
